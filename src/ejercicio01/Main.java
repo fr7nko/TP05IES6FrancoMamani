@@ -12,7 +12,7 @@ public class Main {
         int n2 = 10;
         int n3 = 8;
         int n4 = 10;
-        int n5 = 4;
+        int n5 = 4;20.
         double total = (n1+n2+n3+n4+n5)/5;
         System.out.println("Edad: " + edad);
         System.out.println("Pais: " + pais);

@@ -15,7 +15,6 @@ public class Main {
         numero = sc.nextInt();
         //Verifica si el numero esta entre el 0 y 10
         if (numero >= 0 && numero <= 10){
-        //estructura de repeticion hasta que el contador sea igual al numero ingresado
         while (contador <= numero){
             factorial = factorial * contador;
             contador ++;
