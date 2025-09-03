@@ -17,7 +17,7 @@ public class Personas {
     }
     
 
-    // Contrustores Parametrizado
+    // Contrustor Parametrizado
     
   public Personas(String dni, String nombre, LocalDate fechaDeNacimiento, String provincia) {
         this.dni = dni;
@@ -26,7 +26,7 @@ public class Personas {
         this.provincia = provincia;
     }
 
-    // Metodos Accesores
+    // Metodos Accesores getters y setters
 
     public String getDni() {
         return dni;
@@ -62,6 +62,7 @@ public class Personas {
 
 
     // Metodos creados
+    
     // Punto 1 Metodo para Calcular la edad
     public int calcularEdad() {
         return Period.between(fechaDeNacimiento, LocalDate.now()).getYears();

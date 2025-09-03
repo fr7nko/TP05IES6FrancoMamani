@@ -40,14 +40,22 @@ public static void main(String[] args) {
     Personas personaCinco = new Personas();
     personaCinco.setDni("38765432");
     personaCinco.setNombre("Francisco");
-    personaCinco.setFechaDeNacimiento(LocalDate.of(1993, 11, 30));
+    personaCinco.setFechaDeNacimiento(LocalDate.of(2023, 11, 30));
     personaCinco.setProvincia("Salta");
     
-    // Calcular su edad
-    //int edad = personaUno.calcularEdad();
-   // System.out.println(personaUno.getNombre() + " tiene " + edad + " años.");
+    // Persona 6 con constructor parametrizado
+    Personas personaSeis = new Personas(
+            "38963741", 
+            "Mauro", 
+            LocalDate.of(1991, 1, 16), 
+            "Jujuy"
+    );
+    
+
     // Imprimir nombre y edad de cada persona
-   
-personaCinco.mostrarDatos();
+    System.out.println(personaUno.getNombre() + " tiene " + personaUno.calcularEdad() + " años.");
+
+    //Otra forma de mostrar los datos con el Metodo creado
+    personaSeis.mostrarDatos();
 }
 }
