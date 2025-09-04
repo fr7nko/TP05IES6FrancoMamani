@@ -11,23 +11,55 @@ public class Personas {
     private LocalDate fechaDeNacimiento;
     private String provincia;
 
+    // Metodos creados
+    // Punto 1 Metodo para Calcular la edad
+    public int calcularEdad() {
+        return Period.between(fechaDeNacimiento, LocalDate.now()).getYears();
+    }
+
+    // Punto 2 Metodo para saber si es mayor de edad
+    public boolean mayorDeEdad() {
+        return calcularEdad() >= 18;
+    }
+
+    // Punto 3 Metodo que muestra todos los datos de la persona
+    public void mostrarDatos() {
+    System.out.println("DNI: " + dni);
+    System.out.println("Nombre: " + nombre);
+    System.out.println("Fecha de nacimiento: " + fechaDeNacimiento);
+    System.out.println("Provincia: " + provincia);
+    System.out.println("Edad: " + calcularEdad() + " años");
+
+    if (mayorDeEdad()) {
+        System.out.println("La persona es mayor de edad");
+    } else {
+        System.out.println("La persona no es mayor de edad");
+    }
+
+    }
+
     // Constructor por defecto
-    
     public Personas() {
     }
     
 
     // Contrustor Parametrizado
-    
   public Personas(String dni, String nombre, LocalDate fechaDeNacimiento, String provincia) {
         this.dni = dni;
         this.nombre = nombre;
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.provincia = provincia;
     }
+     // Contrustor Parametrizado con atributo inicializado en "Jujuy"
+     public Personas(String dni, String nombre, LocalDate fechaDeNacimiento) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.provincia = "Jujuy";
+    } 
+
 
     // Metodos Accesores getters y setters
-
     public String getDni() {
         return dni;
     }
@@ -59,34 +91,5 @@ public class Personas {
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
-
-
-    // Metodos creados
-    
-    // Punto 1 Metodo para Calcular la edad
-    public int calcularEdad() {
-        return Period.between(fechaDeNacimiento, LocalDate.now()).getYears();
-    }
-   
-    // Punto 2 Metodo para saber si es mayor de edad
-    public boolean mayorDeEdad() {
-        return calcularEdad() >= 18;
-    }
-
-    // Punto 3 Metodo que muestra todos los datos de la persona
-public void mostrarDatos() {
-    System.out.println("DNI: " + dni);
-    System.out.println("Nombre: " + nombre);
-    System.out.println("Fecha de nacimiento: " + fechaDeNacimiento);
-    System.out.println("Provincia: " + provincia);
-    System.out.println("Edad: " + calcularEdad() + " años");
-    
-    if (mayorDeEdad()) {
-        System.out.println("La persona es mayor de edad");
-    } else {
-        System.out.println("La persona no es mayor de edad");
-    }
-    
-}
 
 }
